@@ -14,7 +14,7 @@ Search, inspection and reporting only. No weapons release, no terminal guidance,
 
 | # | Milestone | Needs | Done when |
 | --- | --- | --- | --- |
-| 0.0 | Simulator feasibility: PX4 SITL running headless in a container, one scripted flight read back over MAVLink | Docker (works) | A takeoff-hold-land log on this laptop, with the real build and run time recorded |
+| 0.0 | Simulator feasibility: PX4 SITL running headless in a container, one scripted flight read back over MAVLink | Docker (works) | Met for the built-in simulator; Gazebo camera frames confirmed published, content unchecked (see Risks) |
 | 0.1 | Mission schema and safety monitor: a typed mission (waypoints, pattern, report triggers) and a deterministic checker for geofence, altitude band, battery reserve, lost-link action, and "no action without evidence" | Laptop, no simulator | Property tests pass; every veto carries a machine-readable reason; a fuzzer finds no mission the monitor accepts that violates a rule |
 | 0.2 | Scenario library and scoring harness: scripted scenarios with ground-truth outcomes, run against a stub planner (oracle, random, adversarial) | Laptop | Scores for the stubs bracket what a real model can do (oracle near perfect, adversarial maximally vetoed) |
 | 0.3 | Executor: behaviour-tree nodes (search, orbit, report, return) flying the mission in SITL | Simulator from 0.0 | Scenario outcomes from real simulated flight agree with the harness's predicted outcomes |
@@ -29,7 +29,7 @@ The deliberate order puts the safety monitor and the scoring harness before any 
 
 ## Risks and unknowns
 
-- **Simulator on Windows.** PX4 with Gazebo is Linux-first. Docker Desktop's Linux engine runs, so a headless container is the route; whether Gazebo's camera sensor renders usefully without a GPU in the container is unknown and decides how real the VLM's input can be. Fallback: feed the VLM rendered or recorded frames outside the simulator and say so.
+- **Simulator on Windows (checked 2026-10-22, milestone 0.0 mostly met).** In Docker Desktop's Linux engine, using `px4io/px4-dev-simulation-jammy` (1.35 GB image) with PX4 v1.17.0 built from source in a Docker volume: (a) PX4's built-in physics simulator (`sihsim_quadx`) flew a scripted takeoff and landing over MAVLink from Python (pymavlink): arm and takeoff accepted, peak 10.62 m for a 10 m command, landed at 0.23 m; (b) that image lacks Gazebo Harmonic, so `gz_x500` failed until `gz-harmonic` was installed from the OSRF apt repository, after which `gz_x500_mono_cam` built and ran headless with no GPU, and the camera topic published frames (one message read, sequence number 136). Not yet checked: that the frames are non-blank and at a usable resolution, flight under Gazebo physics, the ROS 2 bridge, and VLM input from those frames. The container is the reproducible route; it needs a Dockerfile in the repo so the Harmonic install is not a manual step. Build time was not measured reliably.
 - **Scenario realism.** 200 scripted scenarios written by one person are a test of the monitor, not of the world. State this wherever results appear, and hold out a test set with a hash lock as TriageBox does.
 - **The monitor can only be as good as its rules.** "No action without evidence" needs a precise definition (what counts as evidence, from which sensor) or it is vacuous. Writing that definition is the first design task of 0.1.
 - **Version drift.** PX4, Gazebo, ROS 2 and MAVSDK versions move; pin them and record them.
