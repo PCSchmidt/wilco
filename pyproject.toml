@@ -7,6 +7,7 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = ["pytest", "hypothesis"]
+harness = ["numpy"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]

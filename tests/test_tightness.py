@@ -8,7 +8,7 @@ import dataclasses
 
 import pytest
 
-from oracle import oracle_safe
+from wilco.oracle import oracle_safe
 from wilco import Context, Envelope, Evidence, State, check_action, vet
 from wilco.schema import TrackAction, parse_mission
 

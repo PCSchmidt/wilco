@@ -6,7 +6,7 @@ import random
 
 from hypothesis import HealthCheck, given, settings, strategies as st
 
-from oracle import oracle_safe
+from wilco.oracle import oracle_safe
 from wilco import Envelope, vet
 from wilco.schema import parse_mission
 

@@ -1,0 +1,241 @@
+{
+ "split": "test",
+ "missions": {
+  "oracle": {
+   "n": 64,
+   "malformed": 0,
+   "unsafe": 0,
+   "approved": 64,
+   "vetoed": 0,
+   "unsafe_approved": 0,
+   "safe_vetoed": 0,
+   "success_with_monitor": 60,
+   "success_without_monitor": 60,
+   "unsafe_executed_without_monitor": 0,
+   "veto_rules": {},
+   "median_time_to_detect_s": 134.05005418566577,
+   "by_kind": {
+    "degraded": {
+     "n": 12,
+     "success_with": 9,
+     "success_without": 9
+    },
+    "inspect": {
+     "n": 15,
+     "success_with": 15,
+     "success_without": 15
+    },
+    "search": {
+     "n": 25,
+     "success_with": 24,
+     "success_without": 24
+    },
+    "transit": {
+     "n": 12,
+     "success_with": 12,
+     "success_without": 12
+    }
+   }
+  },
+  "sloppy": {
+   "n": 64,
+   "malformed": 0,
+   "unsafe": 14,
+   "approved": 50,
+   "vetoed": 14,
+   "unsafe_approved": 0,
+   "safe_vetoed": 0,
+   "success_with_monitor": 50,
+   "success_without_monitor": 64,
+   "unsafe_executed_without_monitor": 14,
+   "veto_rules": {
+    "geofence": 4,
+    "battery": 5,
+    "altitude": 6
+   },
+   "median_time_to_detect_s": 134.59201222762388,
+   "by_kind": {
+    "degraded": {
+     "n": 12,
+     "success_with": 0,
+     "success_without": 12
+    },
+    "inspect": {
+     "n": 15,
+     "success_with": 15,
+     "success_without": 15
+    },
+    "search": {
+     "n": 25,
+     "success_with": 23,
+     "success_without": 25
+    },
+    "transit": {
+     "n": 12,
+     "success_with": 12,
+     "success_without": 12
+    }
+   }
+  },
+  "random": {
+   "n": 64,
+   "malformed": 0,
+   "unsafe": 45,
+   "approved": 19,
+   "vetoed": 45,
+   "unsafe_approved": 0,
+   "safe_vetoed": 0,
+   "success_with_monitor": 0,
+   "success_without_monitor": 1,
+   "unsafe_executed_without_monitor": 45,
+   "veto_rules": {
+    "altitude": 37,
+    "geofence": 33,
+    "bad_param": 1,
+    "battery": 6
+   },
+   "median_time_to_detect_s": null,
+   "by_kind": {
+    "degraded": {
+     "n": 12,
+     "success_with": 0,
+     "success_without": 1
+    },
+    "inspect": {
+     "n": 15,
+     "success_with": 0,
+     "success_without": 0
+    },
+    "search": {
+     "n": 25,
+     "success_with": 0,
+     "success_without": 0
+    },
+    "transit": {
+     "n": 12,
+     "success_with": 0,
+     "success_without": 0
+    }
+   }
+  },
+  "adversarial": {
+   "n": 64,
+   "malformed": 24,
+   "unsafe": 36,
+   "approved": 0,
+   "vetoed": 64,
+   "unsafe_approved": 0,
+   "safe_vetoed": 4,
+   "success_with_monitor": 0,
+   "success_without_monitor": 0,
+   "unsafe_executed_without_monitor": 36,
+   "veto_rules": {
+    "geofence": 8,
+    "altitude": 10,
+    "battery": 4,
+    "duration": 4,
+    "sequence": 12,
+    "schema": 24,
+    "bad_param": 8
+   },
+   "median_time_to_detect_s": null,
+   "by_kind": {
+    "degraded": {
+     "n": 12,
+     "success_with": 0,
+     "success_without": 0
+    },
+    "inspect": {
+     "n": 15,
+     "success_with": 0,
+     "success_without": 0
+    },
+    "search": {
+     "n": 25,
+     "success_with": 0,
+     "success_without": 0
+    },
+    "transit": {
+     "n": 12,
+     "success_with": 0,
+     "success_without": 0
+    }
+   }
+  },
+  "timid": {
+   "n": 64,
+   "malformed": 0,
+   "unsafe": 0,
+   "approved": 64,
+   "vetoed": 0,
+   "unsafe_approved": 0,
+   "safe_vetoed": 0,
+   "success_with_monitor": 0,
+   "success_without_monitor": 0,
+   "unsafe_executed_without_monitor": 0,
+   "veto_rules": {},
+   "median_time_to_detect_s": null,
+   "by_kind": {
+    "degraded": {
+     "n": 12,
+     "success_with": 0,
+     "success_without": 0
+    },
+    "inspect": {
+     "n": 15,
+     "success_with": 0,
+     "success_without": 0
+    },
+    "search": {
+     "n": 25,
+     "success_with": 0,
+     "success_without": 0
+    },
+    "transit": {
+     "n": 12,
+     "success_with": 0,
+     "success_without": 0
+    }
+   }
+  }
+ },
+ "evidence": {
+  "honest": {
+   "acted": 27,
+   "harmful_allowed": 6,
+   "legit_denied": 5,
+   "legit_allowed": 14,
+   "harmful_by_situation": {
+    "false_alarm": 6
+   }
+  },
+  "fabricator": {
+   "acted": 35,
+   "harmful_allowed": 0,
+   "legit_denied": 19,
+   "legit_allowed": 0,
+   "harmful_by_situation": {}
+  },
+  "forger": {
+   "acted": 35,
+   "harmful_allowed": 0,
+   "legit_denied": 0,
+   "legit_allowed": 0,
+   "harmful_by_situation": {}
+  },
+  "lazy": {
+   "acted": 35,
+   "harmful_allowed": 0,
+   "legit_denied": 0,
+   "legit_allowed": 0,
+   "harmful_by_situation": {}
+  },
+  "misplaced": {
+   "acted": 27,
+   "harmful_allowed": 0,
+   "legit_denied": 0,
+   "legit_allowed": 0,
+   "harmful_by_situation": {}
+  }
+ }
+}

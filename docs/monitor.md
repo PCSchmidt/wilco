@@ -31,7 +31,7 @@ The evidence log is written by perception, outside the model. If the model could
 ## What has been checked
 
 - **Hand-written cases** (`tests/test_monitor.py`): one or more per rule and per evidence failure, the malformed-plan list, fail-closed behaviour, config validation.
-- **An independent oracle** (`tests/oracle.py`): walks the flight in 0.5 m steps with a half-plane fence test and its own path and energy bookkeeping. 400 random plans per run (the generator approves 740 of 3,000, so the test exercises approvals): whenever the monitor approves, the oracle must find the plan safe. No failure.
+- **An independent oracle** (`src/wilco/oracle.py`): walks the flight in 0.5 m steps with a half-plane fence test and its own path and energy bookkeeping. 400 random plans per run (the generator approves 740 of 3,000, so the test exercises approvals): whenever the monitor approves, the oracle must find the plan safe. No failure.
 - **No gratuitous vetoes**: 400 random plans that are safe by construction (inside 400 m, altitudes in the band, at most four waypoints) are all approved.
 - **Monotonicity**: tightening the envelope (more reserve, larger safety factor, shorter duration, narrower altitude band, bigger margin, smaller battery, smaller fence) never turns a veto into an approval.
 - **Thresholds** (`tests/test_tightness.py`): bisecting battery size and fence size, the monitor flips at the same value as the oracle (within 1% of energy, within 1 m of fence) for goto, search and orbit plans. Random plans almost never land near a threshold, so without this test a monitor that was slightly lax or strict would pass.

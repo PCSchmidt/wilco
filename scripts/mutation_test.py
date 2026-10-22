@@ -46,7 +46,7 @@ MUTANTS = [
 
 
 def run_tests() -> bool:
-    r = subprocess.run([sys.executable, "-m", "pytest", "-x", "-q", "-p", "no:cacheprovider"], cwd=ROOT, capture_output=True, text=True, timeout=900)
+    r = subprocess.run([sys.executable, "-m", "pytest", "-x", "-q", "-p", "no:cacheprovider", "--ignore=tests/test_harness.py"], cwd=ROOT, capture_output=True, text=True, timeout=900)
     return r.returncode == 0
 
 
