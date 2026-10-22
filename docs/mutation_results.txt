@@ -1,0 +1,31 @@
+killed    fence margin ignored on legs
+killed    battery check skipped on legs
+killed    return energy ignores distance
+killed    safety factor dropped from legs
+killed    reserve ignored
+SURVIVED  orbit end battery check removed
+killed    orbit energy not charged
+killed    orbit circle margin dropped
+killed    upper altitude not checked
+killed    lower altitude not checked
+killed    takeoff altitude unchecked
+killed    lawnmower last row missing
+killed    duration comparison inverted
+SURVIVED  final reserve check removed
+killed    step after return allowed
+killed    stale/future evidence accepted
+killed    old evidence accepted
+killed    untrusted source accepted
+killed    claimed position not compared
+killed    NaN confidence accepted
+killed    class mismatch accepted
+killed    fails open
+killed    track action skips fence/energy
+killed    booleans accepted as numbers
+killed    unknown fields accepted
+SURVIVED  non-finite numbers accepted
+SURVIVED  ray-casting side flipped
+killed    boundary distance uses max
+SURVIVED  segment crossing test removed
+
+24/29 mutants killed

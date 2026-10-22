@@ -1,0 +1,17 @@
+[project]
+name = "wilco"
+version = "0.1.0"
+description = "Deterministic safety monitor for language-tasked drone missions (search, inspection, reporting only)"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest", "hypothesis"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
