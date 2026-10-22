@@ -65,11 +65,15 @@ def _reachable(sc: Scenario, cfg) -> float:
     return sc.cfg["half"] - cfg.fence_margin - 2.0
 
 
-def _outcome(mission: Mission, sc: Scenario) -> tuple[bool, float | None, float | None]:
-    """Would the mission accomplish the request if flown? Returns (success, time to first detection, coverage)."""
+def _outcome(mission: Mission, sc: Scenario, flight=None) -> tuple[bool, float | None, float | None]:
+    """Would the mission accomplish the request if flown? Returns (success, time to first detection, coverage).
+
+    `flight` is (positions (n,3), times (n,)) of a trajectory to score instead of the predicted path; milestone
+    0.3 passes simulated flights here to compare predicted and flown outcomes with the same scoring code.
+    """
     cfg = sc.envelope()
     lim = _reachable(sc, cfg)
-    a, t = _flight(mission, sc)
+    a, t = flight if flight is not None else _flight(mission, sc)
     has_report = any(isinstance(s, Report) and s.cls == sc.want for s in mission.steps)
     if sc.kind in ("search", "degraded"):
         x0, y0, w, h = sc.area

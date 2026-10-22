@@ -3,3 +3,6 @@ __pycache__/
 .pytest_cache/
 .hypothesis/
 *.egg-info/
+sim/work/
+sim/out/
+sim/*.log

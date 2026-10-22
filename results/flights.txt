@@ -1,0 +1,54 @@
+51 flights logged; 50 completed take-off-to-landing logs, 0 did not complete.
+
+== oracle (29 flights)
+  flight time / monitor's estimate (path length at 12 m/s): median 1.46, range 1.34 to 2.72
+  mean ground+vertical speed over the flight: median 8.3 m/s (assumed 12.0)
+  largest distance from the planned path: median 8.8 m, worst 20.4 m; 95th percentile within a flight: median 7.3 m
+  closest approach to the fence boundary: worst 1.5 m (margin 5 m); flights closer than the margin: 3, outside the fence: 0
+  highest altitude above the band's ceiling: worst -9.5 m
+  task success predicted vs recomputed on the flown path: agree 29/29; predicted success 28, flown 28
+  area coverage flown minus predicted: mean +0.001, worst -0.003 (over 13 search flights)
+
+== probe (5 flights)
+  flight time / monitor's estimate (path length at 12 m/s): median 1.44, range 1.36 to 1.46
+  mean ground+vertical speed over the flight: median 8.3 m/s (assumed 12.0)
+  largest distance from the planned path: median 8.8 m, worst 13.8 m; 95th percentile within a flight: median 7.8 m
+  closest approach to the fence boundary: worst -5.2 m (margin 5 m); flights closer than the margin: 1, outside the fence: 1
+  highest altitude above the band's ceiling: worst -59.5 m
+  task success predicted vs recomputed on the flown path: agree 5/5; predicted success 0, flown 0
+  area coverage flown minus predicted: mean +0.001, worst +0.000 (over 5 search flights)
+
+== sloppy (8 flights)
+  flight time / monitor's estimate (path length at 12 m/s): median 1.41, range 1.35 to 2.07
+  mean ground+vertical speed over the flight: median 8.6 m/s (assumed 12.0)
+  largest distance from the planned path: median 8.5 m, worst 14.8 m; 95th percentile within a flight: median 7.1 m
+  closest approach to the fence boundary: worst 109.6 m (margin 5 m); flights closer than the margin: 0, outside the fence: 0
+  highest altitude above the band's ceiling: worst -39.6 m
+  task success predicted vs recomputed on the flown path: agree 8/8; predicted success 8, flown 8
+  area coverage flown minus predicted: mean -0.005, worst -0.008 (over 3 search flights)
+
+== speed (8 flights)
+  flight time / monitor's estimate (path length at 12 m/s): median 1.51, range 1.35 to 3.15
+  mean ground+vertical speed over the flight: median 8.0 m/s (assumed 12.0)
+  largest distance from the planned path: median 6.4 m, worst 15.3 m; 95th percentile within a flight: median 4.8 m
+  closest approach to the fence boundary: worst -9.3 m (margin 5 m); flights closer than the margin: 8, outside the fence: 4
+  highest altitude above the band's ceiling: worst -59.4 m
+  task success predicted vs recomputed on the flown path: agree 8/8; predicted success 0, flown 0
+  area coverage flown minus predicted: mean +0.000, worst -0.000 (over 8 search flights)
+
+Fence-edge probes (plan legal by the monitor: at least 5 m inside the fence; planned closest approach in brackets):
+  probe_corner             flown closest approach   -5.2 m  (planned 6.0 m)  max distance from planned path 13.8 m  max altitude over ceiling -59.5 m
+  probe_corner_diagonal    flown closest approach   +5.8 m  (planned 6.0 m)  max distance from planned path 9.2 m  max altitude over ceiling -59.7 m
+  probe_east_edge_long     flown closest approach   +5.8 m  (planned 6.0 m)  max distance from planned path 6.3 m  max altitude over ceiling -59.5 m
+  probe_east_edge_short    flown closest approach   +5.4 m  (planned 6.0 m)  max distance from planned path 3.4 m  max altitude over ceiling -59.6 m
+  probe_north_edge         flown closest approach   +5.8 m  (planned 6.0 m)  max distance from planned path 8.8 m  max altitude over ceiling -59.8 m
+
+Fence-corner probe (planned 6.0 m inside the fence at the corner) at different speed limits:
+  carrot v12a  flown closest approach to the fence   +1.9 m  (shortfall against the plan   4.1 m)  max distance from planned path   4.1 m  flight time 392 s
+  carrot v12b  flown closest approach to the fence   +5.0 m  (shortfall against the plan   1.0 m)  max distance from planned path   3.7 m  flight time 394 s
+  carrot v4    flown closest approach to the fence   +3.3 m  (shortfall against the plan   2.7 m)  max distance from planned path   3.9 m  flight time 912 s
+  carrot v8    flown closest approach to the fence   +4.9 m  (shortfall against the plan   1.1 m)  max distance from planned path   4.4 m  flight time 481 s
+  plain v12a   flown closest approach to the fence   -9.3 m  (shortfall against the plan  15.3 m)  max distance from planned path  15.3 m  flight time 393 s
+  plain v12b   flown closest approach to the fence   -8.4 m  (shortfall against the plan  14.4 m)  max distance from planned path  14.4 m  flight time 391 s
+  plain v4     flown closest approach to the fence   -2.4 m  (shortfall against the plan   8.4 m)  max distance from planned path   8.4 m  flight time 906 s
+  plain v8     flown closest approach to the fence   -6.2 m  (shortfall against the plan  12.2 m)  max distance from planned path  14.4 m  flight time 481 s
