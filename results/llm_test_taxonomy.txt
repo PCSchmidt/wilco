@@ -1,0 +1,41 @@
+q7b_test_L0_R0 (64 first attempts)
+   46  success
+    6  vetoed: battery
+    4  approved, orbit wrong
+    3  vetoed: geofence
+    3  vetoed: bad_param
+    1  vetoed: battery, duration
+    1  vetoed: battery, geofence
+
+q7b_test_L1_R2 (64 first attempts)
+   32  success
+    7  vetoed: battery, duration
+    6  approved, covers too little
+    5  approved, orbit wrong
+    4  vetoed: battery
+    4  approved, target missed
+    2  vetoed: battery, geofence
+    2  vetoed: battery, duration, geofence
+    1  approved, wrong extent
+    1  vetoed: geofence
+
+q1p5b_test_L0_R0 (64 first attempts)
+   23  success
+   10  vetoed: altitude, sequence
+    8  malformed
+    6  vetoed: battery, duration, geofence
+    6  approved, wrong extent
+    3  vetoed: geofence
+    2  vetoed: battery
+    2  vetoed: battery, duration
+    2  vetoed: battery, geofence
+    1  approved, orbit wrong
+    1  vetoed: bad_param
+
+q1p5b_test_L1_R2 (64 first attempts)
+   43  malformed
+   12  success
+    4  vetoed: battery, duration, geofence
+    3  vetoed: battery, duration
+    2  approved, wrong extent
+

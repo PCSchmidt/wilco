@@ -121,8 +121,12 @@ def _outcome(mission: Mission, sc: Scenario, flight=None) -> tuple[bool, float |
 
 
 def run_mission(planner: str, sc: Scenario, index: int) -> Result:
+    return score_text(sc, propose(planner, sc, index))
+
+
+def score_text(sc: Scenario, text: str) -> Result:
+    """Vet and score one proposed plan (as JSON text) for a scenario."""
     cfg = sc.envelope()
-    text = propose(planner, sc, index)
     st = State(0.0, 0.0, 0.0, sc.start_energy_wh)
     dec: Decision = vet(text, cfg, st)
     try:

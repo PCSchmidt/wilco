@@ -108,7 +108,7 @@ def _inspect(rng: random.Random, i: int) -> Scenario:
     lim = h * rng.choice([0.5, 0.8, 0.97])
     x, y = round(rng.uniform(-lim, lim), 1), round(rng.uniform(-lim, lim), 1)
     r = round(rng.uniform(10, 60), 1)
-    text = f"Inspect the structure at x {x:.0f} m, y {y:.0f} m (about {r:.0f} m across) by circling it at a safe distance."
+    text = f"Inspect the structure at x {x:.0f} m, y {y:.0f} m (about {2 * r:.0f} m across) by circling it at a safe distance."
     return Scenario(f"I{i:03d}", "inspect", text, cfg, cfg["battery_wh"], structure=(x, y, r))
 
 
