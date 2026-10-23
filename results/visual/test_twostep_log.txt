@@ -1,0 +1,48 @@
+Visual tasking, test half: 30 scenes. Intervals are 95% Wilson; success needs a monitor-approved plan with an orbit centred within T of the true vehicle.
+
+  oracle (baseline)              success at 5 m 100.0% [88.6,100.0]   10 m 100.0% [88.6,100.0]   15 m 100.0% [88.6,100.0]   25 m 100.0% [88.6,100.0]   median error    0.0 m (30/30 with a position)
+  red region of vehicle size (baseline) success at 5 m 100.0% [88.6,100.0]   10 m 100.0% [88.6,100.0]   15 m 100.0% [88.6,100.0]   25 m 100.0% [88.6,100.0]   median error    0.8 m (30/30 with a position)
+  largest red region (baseline)  success at 5 m  26.7% [14.2, 44.4]   10 m  26.7% [14.2, 44.4]   15 m  26.7% [14.2, 44.4]   25 m  33.3% [19.2, 51.2]   median error   46.2 m (30/30 with a position)
+  image centre (baseline)        success at 5 m   6.7% [ 1.8, 21.3]   10 m   6.7% [ 1.8, 21.3]   15 m   6.7% [ 1.8, 21.3]   25 m   6.7% [ 1.8, 21.3]   median error   49.4 m (30/30 with a position)
+[1/30] V001 err 42.45216131129248 went to a distractor (red_building, red)
+[2/30] V003 err 65.05693660171835 no object near the planned point (localisation off)
+[3/30] V005 err 36.77805459781689 no object near the planned point (localisation off)
+[4/30] V007 err 50.08332656683258 no object near the planned point (localisation off)
+[5/30] V009 err 73.03913266188201 no object near the planned point (localisation off)
+[6/30] V011 err 32.606272402714175 no object near the planned point (localisation off)
+[7/30] V013 err 101.97427518742168 no object near the planned point (localisation off)
+[8/30] V015 err 267.57481234226816 no object near the planned point (localisation off)
+[9/30] V017 err 57.23680022503008 no object near the planned point (localisation off)
+[10/30] V019 err 42.236691395041845 no object near the planned point (localisation off)
+[11/30] V021 err 2.8217724926011107 success
+[12/30] V023 err 46.72804832218007 no object near the planned point (localisation off)
+[13/30] V025 err 18.658523521436507 no object near the planned point (localisation off)
+[14/30] V027 err 51.60200093019649 went to a distractor (red_building, red)
+[15/30] V029 err 27.591855682429173 no object near the planned point (localisation off)
+[16/30] V031 err 57.77327496342924 no object near the planned point (localisation off)
+[17/30] V033 err 30.503458820271526 no object near the planned point (localisation off)
+[18/30] V035 err 74.63770762824913 no object near the planned point (localisation off)
+[19/30] V037 err 63.24939920663278 went to a distractor (tree, green)
+[20/30] V039 err 72.94318336897561 no object near the planned point (localisation off)
+[21/30] V041 err 71.36706313139136 went to a distractor (tree, green)
+[22/30] V043 err 33.148968309737796 no object near the planned point (localisation off)
+[23/30] V045 err 38.25505195395766 went to a distractor (building, gray)
+[24/30] V047 err 65.19844476672739 went to a distractor (tree, green)
+[25/30] V049 err 54.20153872354551 no object near the planned point (localisation off)
+[26/30] V051 err 58.970166185962256 went to a distractor (tree, green)
+[27/30] V053 err 33.91453965484421 no object near the planned point (localisation off)
+[28/30] V055 err 67.28990711837845 no object near the planned point (localisation off)
+[29/30] V057 err 45.5621004783581 no object near the planned point (localisation off)
+[30/30] V059 err 70.41786705091256 went to a distractor (tree, green)
+
+  qwen25vl3b                     success at 5 m   3.3% [ 0.6, 16.7]   10 m   3.3% [ 0.6, 16.7]   15 m   3.3% [ 0.6, 16.7]   25 m   6.7% [ 1.8, 21.3]   median error   52.9 m (30/30 with a position)
+
+  outcome at 15 m:
+     21  no object near the planned point (localisation off)
+      5  went to a distractor (tree, green)
+      2  went to a distractor (red_building, red)
+      1  success
+      1  went to a distractor (building, gray)
+
+  position error (m): median 52.9, 25th 37.1, 75th 66.8, 90th 73.2
+  seconds per plan: median 4.5, tokens median 234

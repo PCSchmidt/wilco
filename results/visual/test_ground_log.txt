@@ -1,0 +1,46 @@
+Visual tasking, test half: 30 scenes. Intervals are 95% Wilson; success needs a monitor-approved plan with an orbit centred within T of the true vehicle.
+
+  oracle (baseline)              success at 5 m 100.0% [88.6,100.0]   10 m 100.0% [88.6,100.0]   15 m 100.0% [88.6,100.0]   25 m 100.0% [88.6,100.0]   median error    0.0 m (30/30 with a position)
+  red region of vehicle size (baseline) success at 5 m 100.0% [88.6,100.0]   10 m 100.0% [88.6,100.0]   15 m 100.0% [88.6,100.0]   25 m 100.0% [88.6,100.0]   median error    0.8 m (30/30 with a position)
+  largest red region (baseline)  success at 5 m  26.7% [14.2, 44.4]   10 m  26.7% [14.2, 44.4]   15 m  26.7% [14.2, 44.4]   25 m  33.3% [19.2, 51.2]   median error   46.2 m (30/30 with a position)
+  image centre (baseline)        success at 5 m   6.7% [ 1.8, 21.3]   10 m   6.7% [ 1.8, 21.3]   15 m   6.7% [ 1.8, 21.3]   25 m   6.7% [ 1.8, 21.3]   median error   49.4 m (30/30 with a position)
+[1/30] V001 err 0.7443117626372231 success
+[2/30] V003 err 1.0700467279516408 success
+[3/30] V005 err 0.5470831746635983 success
+[4/30] V007 err 4.388576078866597 success
+[5/30] V009 err 0.6579513659838447 success
+[6/30] V011 err 85.90011059364242 no object near the planned point (localisation off)
+[7/30] V013 err 89.09212535347892 went to a distractor (red_building, red)
+[8/30] V015 err 4.407289416410045 success
+[9/30] V017 err 4.881731250284059 success
+[10/30] V019 err 0.5797413216254316 success
+[11/30] V021 err 63.98707994587653 went to a distractor (red_building, red)
+[12/30] V023 err 7.868703832271134 success
+[13/30] V025 err 2.2132555207205455 success
+[14/30] V027 err 54.134670036862644 went to a distractor (red_building, red)
+[15/30] V029 err 4.2539981194166145 success
+[16/30] V031 err 0.8386298349093271 success
+[17/30] V033 err 21.470281786692965 no object near the planned point (localisation off)
+[18/30] V035 err 1.113283432015413 success
+[19/30] V037 err 15.662965874954844 no object near the planned point (localisation off)
+[20/30] V039 err 1.0139033484509223 success
+[21/30] V041 err 1.0638138934982968 success
+[22/30] V043 err 0.6527633568147094 success
+[23/30] V045 err 2.6752569970004547 success
+[24/30] V047 err 20.543154577620218 went to a distractor (red_building, red)
+[25/30] V049 err 96.45844079187681 went to a distractor (red_building, red)
+[26/30] V051 err 8.501911549763365 success
+[27/30] V053 err 0.7496665925596334 success
+[28/30] V055 err 1.5138031576132887 success
+[29/30] V057 err 2.10641876178504 success
+[30/30] V059 err 0.6942621983083673 success
+
+  qwen25vl3b                     success at 5 m  66.7% [48.8, 80.8]   10 m  73.3% [55.6, 85.8]   15 m  73.3% [55.6, 85.8]   25 m  83.3% [66.4, 92.7]   median error    2.4 m (30/30 with a position)
+
+  outcome at 15 m:
+     22  success
+      5  went to a distractor (red_building, red)
+      3  no object near the planned point (localisation off)
+
+  position error (m): median 2.4, 25th 0.9, 75th 13.9, 90th 66.2
+  seconds per plan: median 0.9, tokens median 63

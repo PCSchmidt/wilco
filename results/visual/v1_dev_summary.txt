@@ -1,0 +1,18 @@
+Visual tasking, dev half: 30 scenes. Intervals are 95% Wilson; success needs a monitor-approved plan with an orbit centred within T of the true vehicle.
+
+  oracle (baseline)              success at 5 m 100.0% [88.6,100.0]   10 m 100.0% [88.6,100.0]   15 m 100.0% [88.6,100.0]   25 m 100.0% [88.6,100.0]   median error    0.0 m (30/30 with a position)
+  red region of vehicle size (baseline) success at 5 m 100.0% [88.6,100.0]   10 m 100.0% [88.6,100.0]   15 m 100.0% [88.6,100.0]   25 m 100.0% [88.6,100.0]   median error    0.8 m (30/30 with a position)
+  largest red region (baseline)  success at 5 m  46.7% [30.2, 63.9]   10 m  46.7% [30.2, 63.9]   15 m  46.7% [30.2, 63.9]   25 m  46.7% [30.2, 63.9]   median error   27.5 m (30/30 with a position)
+  image centre (baseline)        success at 5 m   0.0% [ 0.0, 11.4]   10 m   3.3% [ 0.6, 16.7]   15 m   3.3% [ 0.6, 16.7]   25 m  16.7% [ 7.3, 33.6]   median error   45.0 m (30/30 with a position)
+
+  qwen25vl3b_v1                  success at 5 m   0.0% [ 0.0, 11.4]   10 m   3.3% [ 0.6, 16.7]   15 m   3.3% [ 0.6, 16.7]   25 m   3.3% [ 0.6, 16.7]   median error   62.3 m (30/30 with a position)
+
+  outcome at 15 m:
+     15  vetoed: bad_param
+      9  no object near the planned point (localisation off)
+      4  went to a distractor (building, gray)
+      1  success
+      1  went to a distractor (red_building, red)
+
+  position error (m): median 62.3, 25th 44.6, 75th 133.0, 90th 398.1
+  seconds per plan: median 2.1, tokens median 214

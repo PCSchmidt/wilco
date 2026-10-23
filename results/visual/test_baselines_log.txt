@@ -1,0 +1,6 @@
+Visual tasking, test half: 30 scenes. Intervals are 95% Wilson; success needs a monitor-approved plan with an orbit centred within T of the true vehicle.
+
+  oracle (baseline)              success at 5 m 100.0% [88.6,100.0]   10 m 100.0% [88.6,100.0]   15 m 100.0% [88.6,100.0]   25 m 100.0% [88.6,100.0]   median error    0.0 m (30/30 with a position)
+  red region of vehicle size (baseline) success at 5 m 100.0% [88.6,100.0]   10 m 100.0% [88.6,100.0]   15 m 100.0% [88.6,100.0]   25 m 100.0% [88.6,100.0]   median error    0.8 m (30/30 with a position)
+  largest red region (baseline)  success at 5 m  26.7% [14.2, 44.4]   10 m  26.7% [14.2, 44.4]   15 m  26.7% [14.2, 44.4]   25 m  33.3% [19.2, 51.2]   median error   46.2 m (30/30 with a position)
+  image centre (baseline)        success at 5 m   6.7% [ 1.8, 21.3]   10 m   6.7% [ 1.8, 21.3]   15 m   6.7% [ 1.8, 21.3]   25 m   6.7% [ 1.8, 21.3]   median error   49.4 m (30/30 with a position)
